@@ -4,24 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <title>Scorekeeper</title>
+    
 </head>
-<body>
-    <div class = "container">
-        <img src="" alt="No picture">
-        <div class ="header">
-            <p>Ping Pong Score keeper</p>
+<body class = "is-family-sans-serif">
+    <section class = "section">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <header class="has-text-centered">
+                        <p class="title is-uppercase p-5 is-size-1">scorekeeper</p>
+                    </header>
+                    <div class="card">
+                        <div class="card-image">
+                            <h1 class = "title is-size-1 m-0 pb-5 pt-5 has-text-centered" id = "scoreDisplay">
+                                <span id = "p1Display">0</span> 
+                                to 
+                                <span id  = "p2Display">0</span>
+                            </h1>
+                        </div>
+                        <div class="card-content pt-1">
+                          <div class="content">
+                            <p class = "subtitle has-text-weight-bold m-0 pb-2 ">setting</p>
+                            <div class="columns">
+                                <div class="column">
+                                    <form action="#" id = "form" >
+                                       <div class = "level mb-2">
+                                        <label class = "has-text-weight-semibold" for="pNum">Number of players</label>
+                                        <input class = "input is-small is-rounded is-hovered has-text-centered has-background-info-light" type="number" min = "2" value = "2" 
+                                        id = "pNum" name = "pNum" style = "width: 5rem; height: 1.5rem;">
+                                       </div> 
+                                        <div class = "level mb-2">
+                                            <label class = "has-text-weight-semibold" for="winScore">Winning score</label>
+                                            <input class = "input is-small is-rounded is-hovered has-text-centered has-background-info-light" type="number" min = "1" value="3" 
+                                            id = "winScore" name = "winScore" style = "width: 5rem; height: 1.5rem;">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="column has-text-centered">
+                                    <button class = "button is-danger is-medium" id = "reset">Reset Score</button>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <footer class = "card-footer is-flex is-flex-wrap-wrap is-justify-content-space-evenly " id = "divButtonList">
+                            <button class = "button card-footer-item is-primary" id = "p1Button">Player1</button>
+                            <button class = "button card-footer-item is-primary" id = "p2Button">Player2</button>
+                        </footer>
+                      </div>
+                </div> 
+            </div>
         </div>
-        <div class = "showScore">
-            <p>
-                <span class = "score">0</span>
-                <span>to</span>
-                <span class = "score">0</span>
-            </p>
-            <p>Use the buttons below to keep score</p>
-            <label for=""><b>Playing To</b></label>
-            <input type="" name="" id="">
-        </div>
-    </div>
+    </section>
+
+    <style>
+        html {
+            background-color: rgb(100, 139, 223);
+        }
+        .card, input {
+            background: linear-gradient(to bottom right,  rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.2));
+            border-bottom: 1px rgba(255,255,255,0.1) solid;
+            backdrop-filter: blur(5px);
+        }
+    </style>
+
+    <script src="./app.js"></script>
 </body>
 </html>
