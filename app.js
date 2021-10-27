@@ -104,7 +104,7 @@ playNumSelect.addEventListener("change", function (e) {
             let newDisplay = document.createElement("span")
             newDisplay.innerText = 0
             newDisplay.id = `p${i}Display`
-            scoreDisplay.appendChild(document.createTextNode(" to "))
+            scoreDisplay.appendChild(document.createTextNode(" / "))
             scoreDisplay.appendChild(newDisplay)
 
             //push new player
